@@ -1,0 +1,18 @@
+﻿@using MySessionTest.Models;
+
+@{
+    ViewBag.Title = "About";
+}
+
+@*<h4>@Session["Username"]</h4>
+    <h4>@Session["UserId"]</h4>*@
+@{
+    var user = Session["user"] as User;
+}
+@if(user != null)
+{
+    <h4>Name: @user.Name</h4>
+    <h4>Email: @user.Email</h4>
+    <h4>Password: @user.Password</h4>
+}
+
